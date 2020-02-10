@@ -1,0 +1,258 @@
+/*Global*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 100px 500px 300px 250px auto 50px;
+    grid-template-areas: "header header header header header header" "catchword catchword catchword catchword catchword catchword" "aboutUs aboutUs aboutUs aboutUs aboutUs aboutUs" "process process process process process process" "acts acts acts acts acts acts" "footer footer footer footer footer footer";
+}
+
+header {
+    grid-area: header;
+    background-color: #17202A;
+    color: #C0392B;
+    display: flex;
+    flex-direction: row;
+    border-bottom: solid #C0392B 5px;
+    align-items: center;
+    align-content: center;
+}
+
+header .check {
+    display: flex;
+    background-color: #17202A;
+    color: #C0392B;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+header .logo {
+    display: flex;
+    justify-content: flex-start;
+    flex-basis: 300px;
+    margin-left: 20px;
+}
+
+.logo h1::first-letter {
+    color: white;
+    background: url("https://images.unsplash.com/photo-1576158114254-3ba81558b87d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60") no-repeat -260px -260px;
+    border-radius: 50%;
+    font-size: larger;
+    padding: 5px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+}
+
+nav li {
+    padding-right: 2em;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: #7B241C;
+    text-decoration: underline;
+    font-size: larger;
+}
+
+.catchword {
+    grid-area: catchword;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background: url("https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") -260px -250px;
+    opacity: 0.7;
+    justify-content: center;
+    border-bottom: solid #C0392B 5px;
+}
+
+.catchword h1 {
+    display: flex;
+    margin-top: 30px;
+    color: rgb(238, 17, 17);
+    font-size: 3em;
+    justify-content: center;
+}
+
+.catchword p {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: #17202A;
+    mix-blend-mode: color-burn;
+}
+
+.aboutUs {
+    grid-area: aboutUs;
+    background-color: #212F3D;
+    color: #F9EBEA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lawyers {
+    display: flex;
+    flex-grow: 2;
+    flex-direction: column;
+    justify-self: flex-start;
+    align-items: center;
+    justify-content: center;
+}
+
+.aboutUs ul {
+    padding: 5px 40px 7px 0;
+    list-style-type: none;
+}
+
+.aboutUs i {
+    padding-right: 10px;
+}
+
+.process {
+    grid-area: process;
+    display: flex;
+    flex-direction: row;
+}
+
+.procedure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #04312E, #83B8B3);
+}
+
+.procedure i {
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.procedure h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.procedure .question {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    justify-content: center;
+}
+
+.procedure .introduction {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    justify-content: center;
+}
+
+.procedure .choose {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+    justify-content: center;
+}
+
+.procedure p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 0 50px 0 50px;
+    text-align: center;
+}
+
+.acts {
+    grid-area: acts;
+    display: flex;
+    overflow: auto;
+    background-color: #D5D8DC;
+}
+
+.enactedLaw {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow: hidden;
+    border-bottom: 3px #C0392B solid;
+}
+
+.box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.box img {
+    display: flex;
+    flex-basis: auto;
+    margin-left: 5px;
+    border-radius: 10%;
+    width: 33%;
+}
+
+.box p {
+    display: flex;
+    max-width: max-content;
+    font-size: 14px;
+}
+
+.box h3 {
+    font-size: 16px;
+    padding: 15px;
+    font-weight: bold
+}
+
+.box h3 a {
+    text-decoration: none;
+    color: #273746;
+}
+
+footer {
+    grid-area: footer;
+    background: radial-gradient(#D6DBDF, #2E4053);
+    display: grid;
+    flex-basis: auto;
+    color: black;
+    justify-items: center;
+    align-items: center;
+    opacity: 0.7;
+}
+
+footer .contact ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 10px;
+}
+
+
+/*footer li {
+                                                                                                                                                                                                                                                                                                                                                                            padding: 10px;
+                                                                                                                                                                                                                                                                                                                                                                        }*/
